@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAN Unggulan - Selamat Datang Siswa Baru (MPLB)</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font Inter dan Warna Dasar Tailwind -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Latar belakang sangat terang */
+        }
+        /* Menggunakan warna aksen yang vibrant (misalnya, Biru Sekolah dan Kuning Cerah) */
+        .color-primary { background-color: #2563eb; } /* Biru: bg-blue-600 */
+        .text-primary { color: #2563eb; }
+        .color-secondary { background-color: #f59e0b; } /* Kuning: bg-amber-500 */
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. Header dan Navigasi (Sticky) -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo Sekolah -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-extrabold text-primary tracking-tight">
+                        <span class="color-secondary inline-block p-1 rounded-md text-white mr-1">SMAN</span> Unggulan
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigasi -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary transition duration-150 font-medium">Beranda</a>
+                    <a href="#mplb" class="text-primary font-bold transition duration-150 border-b-2 border-primary">MPLB 2024</a>
+                    <a href="#profil" class="text-gray-600 hover:text-primary transition duration-150 font-medium">Profil Sekolah</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-primary transition duration-150 font-medium">Kontak</a>
+                </nav>
+
+                <!-- Tombol Mobile Menu -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-primary focus:outline-none p-2 rounded-md">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl py-2">
+            <a href="#beranda" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Beranda</a>
+            <a href="#mplb" class="block px-4 py-2 text-sm text-primary font-bold hover:bg-gray-100">MPLB 2024</a>
+            <a href="#profil" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Profil Sekolah</a>
+            <a href="#kontak" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Kontak</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (MPLB Theme - Sangat Menarik) -->
+    <main>
+        <section id="beranda" class="color-primary text-white py-16 sm:py-24 md:py-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-xl font-semibold mb-3">Tahun Ajaran 2024/2025</p>
+                <h1 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight">
+                    SELAMAT DATANG SISWA BARU!
+                </h1>
+                <p class="text-lg sm:text-xl max-w-3xl mx-auto mb-8 opacity-90">
+                    Waktunya Masa Pengenalan Lingkungan Baru (MPLB). Mari kita jelajahi sekolah baru Anda dengan semangat dan keceriaan!
+                </p>
+                <a href="#mplb" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-bold rounded-full shadow-xl color-secondary text-gray-900 hover:bg-amber-400 transition duration-300 transform hover:scale-105">
+                    Lihat Jadwal MPLB
+                    <!-- Ikon Panah/Pointer -->
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Section Jadwal MPLB (Detail Program) -->
+        <section id="mplb" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Program MPLB 2024</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Hari 1 -->
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-primary transform hover:scale-[1.02] transition duration-300">
+                        <span class="text-4xl font-extrabold text-primary mb-4 block">Hari 1</span>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Orientasi Kampus & Visi Sekolah</h3>
+                        <p class="text-gray-600">Perkenalan dengan Kepala Sekolah, Pengenalan Guru dan Staf, serta tur keliling fasilitas utama sekolah (Perpustakaan, Lab Komputer, Lapangan Olahraga).</p>
+                    </div>
+
+                    <!-- Hari 2 -->
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-secondary transform hover:scale-[1.02] transition duration-300">
+                        <span class="text-4xl font-extrabold text-secondary mb-4 block">Hari 2</span>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Pengembangan Diri & Tata Tertib</h3>
+                        <p class="text-gray-600">Sesi motivasi dan kepemimpinan. Pemahaman mendalam mengenai tata tertib dan etika siswa SMAN Unggulan. Dilanjutkan sesi ice breaking seru.</p>
+                    </div>
+
+                    <!-- Hari 3 -->
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-primary transform hover:scale-[1.02] transition duration-300">
+                        <span class="text-4xl font-extrabold text-primary mb-4 block">Hari 3</span>
+                        <h3 class="text-2xl font-semibold mb-3 text-gray-900">Ekstrakurikuler & Penutupan</h3>
+                        <p class="text-gray-600">Pameran dan demonstrasi semua kegiatan Ekstrakurikuler (Osis, Pramuka, Klub Sains, dll). Acara penutupan meriah dengan pentas seni perkenalan.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button onclick="showMessage('Download Dokumen Panduan MPLB')" class="inline-flex items-center px-6 py-3 border border-primary text-primary font-semibold rounded-full hover:bg-blue-50 transition duration-300">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download Panduan Lengkap (.PDF)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Section Profil Sekolah (Visi & Misi) -->
+        <section id="profil" class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Visi & Misi Kami</h2>
+                
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <!-- Visi -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-l-4 border-primary">
+                        <h3 class="text-3xl font-bold text-primary mb-4">Visi</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Menjadi lembaga pendidikan unggulan yang menghasilkan generasi berkarakter mulia, berwawasan global, dan berdaya saing tinggi dalam era digital.
+                        </p>
+                    </div>
+
+                    <!-- Misi -->
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-l-4 border-secondary">
+                        <h3 class="text-3xl font-bold text-secondary mb-4">Misi</h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Menciptakan lingkungan belajar yang inovatif dan inspiratif.</li>
+                            <li>Mengembangkan potensi akademik dan non-akademik siswa secara seimbang.</li>
+                            <li>Menanamkan nilai-nilai keagamaan dan kebangsaan yang kuat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. Section Call to Action / Info Pendaftaran -->
+        <section class="py-16 color-secondary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-gray-900">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-3xl font-bold">Siap Menjadi Bagian dari Kami?</h3>
+                    <p class="text-lg">Informasi pendaftaran tahun depan akan dibuka segera.</p>
+                </div>
+                <div>
+                    <a href="#kontak" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-full shadow-md color-primary text-white hover:bg-blue-700 transition duration-300">
+                        Hubungi Panitia
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Kolom 1: Logo & Deskripsi -->
+            <div>
+                <a href="#" class="text-2xl font-extrabold text-white tracking-tight mb-3 block">
+                    <span class="color-secondary inline-block p-1 rounded-md text-gray-900 mr-1">SMAN</span> Unggulan
+                </a>
+                <p class="text-gray-400 text-sm mt-2">Mencetak generasi emas penerus bangsa dengan integritas dan kecerdasan digital.</p>
+            </div>
+
+            <!-- Kolom 2: Tautan Cepat -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Tautan</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#mplb" class="hover:text-primary transition duration-150">Program MPLB</a></li>
+                    <li><a href="#profil" class="hover:text-primary transition duration-150">Visi & Misi</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-150">Ekstrakurikuler</a></li>
+                    <li><a href="#" class="hover:text-primary transition duration-150">Fasilitas</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak Kami -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Hubungi Kami</h4>
+                <address class="space-y-2 text-gray-400 not-italic">
+                    <p>Jl. Pendidikan No. 123, Kota Harapan</p>
+                    <p>Kode Pos 45678</p>
+                    <p>Telp: (021) 888-8888</p>
+                    <p>Email: info@smanunggulan.sch.id</p>
+                </address>
+            </div>
+
+            <!-- Kolom 4: Media Sosial (Placeholder) -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Ikuti Kami</h4>
+                <div class="flex space-x-4 text-gray-400 text-2xl">
+                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Instagram">
+                        <!-- Placeholder Icon: Instagram (Inline SVG) -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4 12h-8v-4h8v4zm-4-1.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </a>
+                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Youtube">
+                        <!-- Placeholder Icon: YouTube (Inline SVG) -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 15l5.58-3.5L10 8V15zm11.97-6.05c-.09-.7-.5-1.32-1.09-1.84C19.78 6.55 18.06 6 12 6s-7.78.55-8.88 1.11c-.59.52-1 1.14-1.09 1.84-.1 1.4-.11 4.5.01 5.95.09.7.5 1.32 1.09 1.84C4.22 17.45 5.94 18 12 18s7.78-.55 8.88-1.11c.59-.52 1-1.14 1.09-1.84.1-1.4.11-4.5-.01-5.95z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10 border-t border-gray-700 pt-6">
+            <p class="text-sm text-gray-500">&copy; 2024 SMAN Unggulan. All rights reserved. Didesain dengan Semangat MPLB.</p>
+        </div>
+    </footer>
+
+    <!-- 7. Custom Message Box (Pengganti alert()) -->
+    <div id="message-box" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 z-[999]">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full text-center">
+            <h4 class="text-xl font-bold mb-3 text-primary">Informasi</h4>
+            <p id="message-text" class="text-gray-700 mb-4"></p>
+            <button onclick="hideMessage()" class="color-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Tutup</button>
+        </div>
+    </div>
+
+    <!-- 8. JavaScript untuk Interaksi -->
+    <script>
+        // Inisialisasi tampilan pesan
+        const messageBox = document.getElementById('message-box');
+        const messageText = document.getElementById('message-text');
+
+        // Fungsi untuk menampilkan pesan (pengganti alert())
+        function showMessage(message) {
+            messageText.textContent = message;
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('flex');
+        }
+
+        // Fungsi untuk menyembunyikan pesan
+        function hideMessage() {
+            messageBox.classList.remove('flex');
+            messageBox.classList.add('hidden');
+        }
+
+        // Logika untuk Mobile Menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Menyembunyikan mobile menu setelah mengklik tautan
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
